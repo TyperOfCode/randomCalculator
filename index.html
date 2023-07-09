@@ -10,16 +10,6 @@
   <label for="severities">Enter severities (seperated by commas):</label>
   <input id="severities" type="text" required>
     
-  <label for="bias"><br>How biased are you to giving yourself a higher severity:</label>
-    <div class="slider-container">
-        <span>Not at all</span>
-        <input id="bias" type="range" min="18" max="90" step="18" value="18" required>
-        <span>Very likely</span>
-    </div>
-
-  <p><br>Bias Value: </p>
-  <span id="biasValue"></span>
-
   <button onclick="calculate()">Calculate</button>
 
   <p id="result"></p>
