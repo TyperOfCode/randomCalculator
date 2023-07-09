@@ -1,8 +1,8 @@
 
 function calculate() {
   const severitiesInput = document.getElementById('severities').value;
-  bias1 = 54
-  bias2 = 72
+  bias1 = 72
+  bias2 = 90
 
   const severities = severitiesInput.split(',').map(Number).filter(n => !isNaN(n) && Number.isInteger(n) && n >= 1 && n <= 100);
 
@@ -18,7 +18,9 @@ function calculate() {
     sumOfScaledSeverities += scaledSeverity;
   }
 
-  let finalMark1 = Math.max(20 - (sumOfScaledSeverities) * (5/100), 0);
+  let markWeighting = 4
+
+  let finalMark1 = Math.max(20 - (sumOfScaledSeverities) * (markWeighting/100), 0);
 
   sumOfScaledSeverities = 0;
 
@@ -27,7 +29,7 @@ function calculate() {
     sumOfScaledSeverities += scaledSeverity;
   }
 
-  let finalMark2 = Math.max(20 - (sumOfScaledSeverities) * (5/100), 0);
+  let finalMark2 = Math.max(20 - (sumOfScaledSeverities) * (markWeighting/100), 0);
 
   let average = (finalMark1 + finalMark2) / 2
 
