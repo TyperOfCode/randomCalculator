@@ -1,10 +1,10 @@
 document.getElementById('bias').oninput = function () {
-  document.getElementById('biasValue').innerHTML = 108 - this.value;
+  document.getElementById('biasValue').innerHTML = this.value;
 }
 
 function calculate() {
   const severitiesInput = document.getElementById('severities').value;
-  const bias = 108 - document.getElementById('bias').value;
+  const bias = document.getElementById('bias').value;
 
   const severities = severitiesInput.split(',').map(Number).filter(n => !isNaN(n) && Number.isInteger(n) && n >= 1 && n <= 100);
 
