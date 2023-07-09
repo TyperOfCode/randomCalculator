@@ -1,5 +1,5 @@
 document.getElementById('bias').oninput = function () {
-  document.getElementById('biasValue').innerHTML = this.value;
+  document.getElementById('biasValue').innerHTML = 108 - this.value;
 }
 
 function calculate() {
