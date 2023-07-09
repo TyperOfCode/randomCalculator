@@ -16,7 +16,7 @@ function calculate() {
   let sumOfScaledSeverities = 0;
 
   for (let severity of severities) {
-    let scaledSeverity = severity * (1 - ((severity - bias) / 100));
+    let scaledSeverity = severity * (1 + ((severity - bias) / 100));
     sumOfScaledSeverities += scaledSeverity;
   }
 
