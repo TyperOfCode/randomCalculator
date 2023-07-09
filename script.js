@@ -18,7 +18,7 @@ function calculate() {
     sumOfScaledSeverities += scaledSeverity;
   }
 
-  let markWeighting = 4
+  let markWeighting = 3
 
   let finalMark1 = Math.max(20 - (sumOfScaledSeverities) * (markWeighting/100), 0);
 
